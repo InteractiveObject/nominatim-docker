@@ -1,0 +1,2 @@
+#!/bin/sh
+docker build --build-arg OSM=http://download.geofabrik.de/africa/morocco-latest.osm.pbf  -t nominatim .
