@@ -47,6 +47,8 @@ RUN mkdir -p /app/git/
 RUN git clone --recursive https://github.com/twain47/Nominatim.git /app/git/
 RUN mkdir -p /app/nominatim
 
+RUN wget -O /app/git/data/country_osm_grid.sql.gz https://www.nominatim.org/data/country_grid.sql.gz
+
 WORKDIR /app/nominatim
 
 RUN cmake /app/git/
